@@ -1,0 +1,133 @@
+.sidebar {
+   background-color: #1e1e2f;
+   color: #fff;
+   width: 80px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   transition: width 0.3s ease, transform 0.3s ease;
+   position: fixed;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: 1000;
+   transform: translateX(0);
+}
+
+.sidebar.hidden {
+   transform: translateX(-100%);
+   /* Completely hide the sidebar */
+}
+
+.sidebar.extended {
+   width: 250px;
+}
+
+.menu-icon {
+   font-size: 1.5rem;
+   cursor: pointer;
+   margin: 1rem;
+   color: #fff;
+}
+
+.top {
+   display: flex;
+   flex-direction: column;
+}
+
+.new-chat {
+   display: flex;
+   align-items: center;
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   transition: background 0.2s ease, padding-left 0.3s;
+}
+
+.new-chat:hover {
+   background-color: #34354a;
+}
+
+.new-chat .icon {
+   font-size: 1.2rem;
+   margin-right: 1rem;
+   color: #9f9f9f;
+}
+
+.recent {
+   margin-top: 1rem;
+}
+
+.recent-title {
+   margin-left: 1rem;
+   font-size: 1rem;
+   font-weight: bold;
+   color: #b0b0b0;
+}
+
+.recent-entry {
+   display: flex;
+   align-items: center;
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   transition: background 0.2s ease, padding-left 0.3s;
+}
+
+.recent-entry:hover {
+   background-color: #34354a;
+}
+
+.recent-entry .icon {
+   font-size: 1.2rem;
+   margin-right: 1rem;
+   color: #9f9f9f;
+}
+
+.bottom {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 1rem;
+}
+
+.bottom-item {
+   display: flex;
+   align-items: center;
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   transition: background 0.2s ease, padding-left 0.3s;
+}
+
+.bottom-item:hover {
+   background-color: #34354a;
+}
+
+.bottom-item .icon {
+   font-size: 1.2rem;
+   margin-right: 1rem;
+   color: #9f9f9f;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   .sidebar {
+      width: 60px;
+      transform: translateX(-100%);
+
+   }
+
+   .sidebar.extended {
+      width: 200px;
+      transform: translateX(0);
+   }
+
+   .new-chat,
+   .recent-entry,
+   .bottom-item {
+      padding: 0.5rem 0.5rem;
+   }
+
+   .menu-icon {
+      margin: 0.5rem;
+      font-size: 1.2rem;
+   }
+}
